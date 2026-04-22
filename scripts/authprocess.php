@@ -13,4 +13,11 @@ if (
     echo "Données complètes ";
 }
 
+
+
+if (!filter_var($email)){
+    echo "email not correct ";
+}else{
+    echo "email coreect ";
+}
 ?>
