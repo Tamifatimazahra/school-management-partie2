@@ -13,8 +13,14 @@
     <div class="bg-white p-8 rounded-2xl shadow-lg w-96">
         
         <h2 class="text-2xl font-bold text-center mb-6">Connexion</h2>
+        <?php
+if (isset($_GET['error'])) {
+    echo "<p style='color:red;'>Email ou mot de passe incorrect </p>";
+}
+?>
 
-        <form action="authprocess.php" method="POST">
+
+        <form action="../scripts/authprocess.php" method="POST">
 
             <!-- Email -->
             <div class="mb-4">
@@ -28,7 +34,6 @@
                 >
             </div>
 
-            <!-- Password -->
             <div class="mb-6">
                 <label class="block mb-1 text-gray-700">Mot de passe</label>
                 <input 
@@ -40,7 +45,6 @@
                 >
             </div>
 
-            <!-- Button -->
             <button 
                 type="submit" 
                 name="login"
