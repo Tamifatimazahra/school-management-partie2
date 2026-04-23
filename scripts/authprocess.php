@@ -1,4 +1,5 @@
 <?php
+session_start();
 $prenom = $_POST['prenom'];
 $name = $_POST['name'];
 $email = $_POST['email'];
@@ -31,6 +32,10 @@ $test_email = "test@gmail.com";
 $test_password = "123456";
 
 if ($email == $test_email && $password == $test_password) {
+    $_SESSION['user'] = [
+        'name' => $name,
+        'role' => 'user'
+    ];
     header("Location: ../public/dashboard.php");
     exit();
 } else {
