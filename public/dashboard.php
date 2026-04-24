@@ -6,7 +6,7 @@ if (!isset($_SESSION['user'])) {
     exit();
 }
 ?>
-
+<a href="logout.php">Déconnexion</a>
 <h1>Welcome <?php echo $_SESSION['user']['name']; ?></h1>
 
 

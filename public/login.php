@@ -1,10 +1,12 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
 
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -15,14 +17,14 @@
         <h2 class="text-2xl font-bold text-center mb-6">Connexion</h2>
         <?php
 if (isset($_GET['error'])) {
-    echo "<p style='color:red;'>Email ou mot de passe incorrect </p>";
+    echo "<p style='color:red;'>Email ou mot de passe incorrect 
+    </p>";
 }
 ?>
 
 
         <form action="../scripts/authprocess.php" method="POST">
-
-            <!-- Email -->
+            
             <div class="mb-4">
                 <label class="block mb-1 text-gray-700">Email</label>
                 <input 
